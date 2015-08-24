@@ -1,0 +1,25 @@
+//- -var page = {'1' : '#','2' : '#','3' : '#','4' : '#','5' : '#', 'Все' : '#'}
+//- .pagination.pull-right
+//-	ul.pagination-list
+//-		each val, key in page
+//-			if selected === key
+//-				li.pagination-item.active
+//-					a.pagination__link(href=val)= key
+//-			else
+//-				li.pagination-item
+//-					a.pagination__link(href=val)= key
+
+.pagination.pull-right
+	ul.pagination__list
+		li.pagination__item.active
+			a(href="#").pagination__link 1
+		li.pagination__item
+			a(href="#").pagination__link 2
+		li.pagination__item
+			a(href="#").pagination__link 3
+		li.pagination__item
+			a(href="#").pagination__link 4
+		li.pagination__item
+			a(href="#").pagination__link 5
+		li.pagination__item
+			a(href="#").pagination__link Все

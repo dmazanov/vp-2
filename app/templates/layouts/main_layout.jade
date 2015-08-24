@@ -1,0 +1,37 @@
+include ../common/mixins.jade
+
+
+doctype html
+html(lang="ru-RU")
+	include ../common/head.jade
+	body
+		<!--[if lt IE 7]>
+		<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+		<![endif]-->
+		.wrapper
+			.main-content
+				//- Шапка
+				include ../common/header.jade
+				.content-container
+					.container
+						//- Навигация
+						include ../common/navigate.jade
+						.content-options
+							include ../common/breadcrumb.jade
+
+							include ../common/view
+
+							include ../common/pagination.jade
+
+						//- Левые блоки
+						aside.sidebar.pull-left.clearfix
+							//- Sidebar
+							include ../common/vertical-menu.jade
+
+						//- Изменяемый контент
+						.variable-content.pull-right.ckearfix
+							//- Изменяемая часть каждй страницы
+							block content
+			a.go-top 
+				sup Наверх
+		include ../common/footer.jade
